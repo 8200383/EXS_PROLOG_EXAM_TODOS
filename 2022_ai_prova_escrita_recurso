@@ -1,0 +1,12 @@
+estado(fr4585, ryanair, barcelona, oporto, ontime).
+estado(tp1142, tap, lisbon, ibiza, delayed).
+estado(fr1084, ryanair, paris, lisbon, canceled).
+
+passageiro(fr4585, joao).
+passageiro(fr4585, maria).
+passageiro(tp1142, mathieu).
+passageiro(fr1084, antonio).
+
+consulta_estado(P, E) :-
+    passageiro(VOO, P),
+    estado(VOO, _, _, _, E).
