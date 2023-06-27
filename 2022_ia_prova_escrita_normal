@@ -1,0 +1,9 @@
+simbolo(maria, 'O').
+simbolo(joao, 'X').
+
+jogada(maria, 1, 2).
+jogada(joao, 1, 1).
+jogada(maria, 2, 1).
+jogada(joao, 2, 2).
+
+proximo(maria).
