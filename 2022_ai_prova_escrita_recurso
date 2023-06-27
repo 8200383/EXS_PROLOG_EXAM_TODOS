@@ -10,3 +10,9 @@ passageiro(fr1084, antonio).
 consulta_estado(P, E) :-
     passageiro(VOO, P),
     estado(VOO, _, _, _, E).
+
+a_tempo(D, L) :-
+    findall(VOO, (estado(VOO, _, _, D, T), T = 'ontime'), L).
+
+lista_cancelados(VOO, ListP):-
+    findall(VOO, (estado(VOO, _, _, _, canceled), passageiro(VOO, _)), ListP).
