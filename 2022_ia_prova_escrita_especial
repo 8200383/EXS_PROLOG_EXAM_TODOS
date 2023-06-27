@@ -15,3 +15,5 @@ comprar(P, I, Q) :-
     receita(P, I, QR),
     ingrediente(I, QI),
     Q is QI - QR.
+
+% comprar(tropical, queijo, Q).
