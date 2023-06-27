@@ -1,0 +1,17 @@
+ingrediente(queijo, 2).
+ingrediente(ananas, 1).
+ingrediente(presunto, 2).
+ingrediente(tomate, 2).
+ingrediente(fiambre, 0).
+
+receita(tropical, ananas, 2).
+receita(tropical, tomate, 1).
+receita(tropical, queijo, 1).
+
+receita(margarita, tomate, 2).
+receita(margarita, queijo, 2).
+
+comprar(P, I, Q) :-
+    receita(P, I, QR),
+    ingrediente(I, QI),
+    Q is QI - QR.
