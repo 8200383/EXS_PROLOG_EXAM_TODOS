@@ -13,3 +13,7 @@ ano(_, -1).
 
 primeiraUC(N, A, UC):-
     nota(UC, A, N, _, _).
+
+completou(E, A):-
+    findall(UC, nota(UC, A, E, _, _), List),
+    length(List, 12).
